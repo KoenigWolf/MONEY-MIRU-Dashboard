@@ -6,5 +6,5 @@
       "@app/*": ["app/*"]
     }
   },
-  "include": ["src/**/*", "page.jsx"]
+  "include": ["src/**/*"]
 }

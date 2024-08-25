@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Sidebar from '../components/Sidebar';
-import '../app/globals.css';  // グローバルCSSをインポート
+import '../app/globals.css';
 
 export default function Layout({ children }) {
   const pathname = usePathname();

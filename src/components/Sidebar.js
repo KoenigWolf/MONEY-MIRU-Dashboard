@@ -15,10 +15,10 @@ const icons = {
 
 const menuItems = [
   { name: 'Dashboard', icon: 'dashboard', id: 'Dashboard' },
-  { name: 'Settings', icon: 'settings', id: 'Settings' },
   { name: 'Employee', icon: 'people', id: 'Employee' },
   { name: 'Product', icon: 'inventory', id: 'Product' },
   { name: 'Money', icon: 'account_balance', id: 'Money' },
+  { name: 'Settings', icon: 'settings', id: 'Settings' },
 ];
 
 export default function Sidebar() {
