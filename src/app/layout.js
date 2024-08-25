@@ -1,18 +1,20 @@
 "use client";
 
+import { usePathname } from 'next/navigation';
 import Sidebar from '../components/Sidebar';
-import '../app/globals.css'; // グローバルCSSを正しいパスでインポート
+import '../app/globals.css';  // グローバルCSSをインポート
 
 export default function Layout({ children }) {
+  const pathname = usePathname();
+  const activeItem = pathname.split('/')[1];
+
   return (
     <html lang="en">
-      <body>
-        <div className="container">
-          <Sidebar />
-          <div className="content">
-            {children}
-          </div>
-        </div>
+      <body className="flex">
+        <Sidebar activeItem={activeItem} />
+        <main className="flex-grow">
+          {children}
+        </main>
       </body>
     </html>
   );

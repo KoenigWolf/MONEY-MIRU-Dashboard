@@ -1,13 +1,11 @@
-import { FaHome, FaCog, FaBell, FaFileAlt, FaTools, FaCamera, FaCloudSun, FaChevronLeft } from 'react-icons/fa';
+import { FaHome, FaCog, FaUsers, FaBox, FaMoneyBill, FaChevronLeft } from 'react-icons/fa';
 
 const icons = {
   dashboard: FaHome,
   settings: FaCog,
-  alerts: FaBell,
-  reports: FaFileAlt,
-  maintenance: FaTools,
-  camera: FaCamera,
-  weather: FaCloudSun,
+  people: FaUsers,             // Employee icon (formerly alerts)
+  inventory: FaBox,            // Product icon (formerly reports)
+  account_balance: FaMoneyBill, // Money icon (formerly maintenance)
   toggle: FaChevronLeft,
 };
 

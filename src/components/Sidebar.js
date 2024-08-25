@@ -2,27 +2,23 @@
 
 import { useState } from 'react';
 import SidebarItem from './SidebarItem';
-import { FaHome, FaCog, FaBell, FaFileAlt, FaTools, FaCamera, FaCloudSun, FaChevronLeft } from 'react-icons/fa';
+import { FaHome, FaCog, FaUsers, FaBox, FaMoneyBill, FaChevronLeft } from 'react-icons/fa';
 
 const icons = {
-  dashboard: FaHome,
-  settings: FaCog,
-  alerts: FaBell,
-  reports: FaFileAlt,
-  maintenance: FaTools,
-  camera: FaCamera,
-  weather: FaCloudSun,
-  toggle: FaChevronLeft,
+  dashboard: FaHome,           // Dashboard icon
+  settings: FaCog,             // Settings icon
+  people: FaUsers,             // Employee icon (formerly alerts)
+  inventory: FaBox,            // Product icon (formerly reports)
+  account_balance: FaMoneyBill, // Money icon (formerly maintenance)
+  toggle: FaChevronLeft,        // Toggle icon for sidebar
 };
 
 const menuItems = [
-  { name: 'Dashboard', icon: 'dashboard', id: 'dashboard' },
-  { name: 'Monitoring Settings', icon: 'settings', id: 'settings' },
-  { name: 'Alert Log', icon: 'alerts', id: 'alerts' },
-  { name: 'Log and Report', icon: 'reports', id: 'reports' },
-  { name: 'Maintenance Management', icon: 'maintenance', id: 'maintenance' },
-  { name: 'Camera Footage Link', icon: 'camera', id: 'camera' },
-  { name: 'Meteorological Data Link', icon: 'weather', id: 'weather' },
+  { name: 'Dashboard', icon: 'dashboard', id: 'Dashboard' },
+  { name: 'Settings', icon: 'settings', id: 'Settings' },
+  { name: 'Employee', icon: 'people', id: 'Employee' },
+  { name: 'Product', icon: 'inventory', id: 'Product' },
+  { name: 'Money', icon: 'account_balance', id: 'E' },
 ];
 
 export default function Sidebar() {
@@ -30,7 +26,7 @@ export default function Sidebar() {
   const [activeItem, setActiveItem] = useState('dashboard');
 
   return (
-    <div className={`bg-blue-900 text-white h-screen ${isCollapsed ? 'w-20' : 'w-64'} transition-width duration-300`}>
+    <div className={`bg-blue-900 text-white h-screen ${isCollapsed ? 'w-20' : 'w-40'} transition-width duration-300`}>
       <div
         className="flex items-center justify-center p-4 cursor-pointer"
         onClick={() => setIsCollapsed(!isCollapsed)}

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
+    "@supabase/supabase-js": "^2.45.2",
     "@svgdotjs/svg.js": "^3.2.4",
     "@svgr/webpack": "^8.1.0",
     "classnames": "^2.5.1",
