@@ -18,7 +18,7 @@ const menuItems = [
   { name: 'Settings', icon: 'settings', id: 'Settings' },
   { name: 'Employee', icon: 'people', id: 'Employee' },
   { name: 'Product', icon: 'inventory', id: 'Product' },
-  { name: 'Money', icon: 'account_balance', id: 'E' },
+  { name: 'Money', icon: 'account_balance', id: 'Money' },
 ];
 
 export default function Sidebar() {
@@ -26,7 +26,7 @@ export default function Sidebar() {
   const [activeItem, setActiveItem] = useState('dashboard');
 
   return (
-    <div className={`bg-blue-900 text-white h-screen ${isCollapsed ? 'w-20' : 'w-40'} transition-width duration-300`}>
+    <div className={`bg-blue-900 text-white h-screen ${isCollapsed ? 'w-30' : 'w-40'} transition-width duration-300`}>
       <div
         className="flex items-center justify-center p-4 cursor-pointer"
         onClick={() => setIsCollapsed(!isCollapsed)}
